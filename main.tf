@@ -33,8 +33,8 @@ resource "azurerm_mssql_server" "sqlserver" {
 
   #we add our account as administrator of the instance
   azuread_administrator {
-    login_username = "epivaral@studyyourdata.com"
-    object_id      = "d805a9e9-1e19-4e25-b353-133b132c867d"
+    login_username = "<login>@studyyourdata.com"
+    object_id      = "d80sF5a9e9-1e09-4e25-b383-123a132c847d"
   }
 }
 
@@ -56,6 +56,6 @@ resource "azurerm_mssql_database" "sqldb" {
 resource "azurerm_mssql_firewall_rule" "MyLaptopRule" {
   name             = "MyLaptopRule"
   server_id        = azurerm_mssql_server.sqlserver.id
-  start_ip_address = "181.209.150.179" #this is my IP address, you should put your IP or range
-  end_ip_address   = "181.209.150.179"
+  start_ip_address = "186.309.150.258" #this IP does not exists, put yours!
+  end_ip_address   = "186.309.150.258"
 }
